@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dragon Ball - Enciclopédia dos Guerreiros</title>
+
+  <!-- Ícone vazio: evita o erro 404 do favicon no console -->
+  <link rel="icon" href="data:,">
+
+  <!-- Fontes do Google: Bangers (títulos) e Poppins (texto) -->
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="topo">
+    <h1>Dragon Ball</h1>
+    <p>Enciclopédia dos Guerreiros Z</p>
+  </header>
+
+  <main>
+    <section class="area-cards">
+      <h2>Personagens</h2>
+
+      <input type="text" id="busca" class="busca" placeholder="Buscar personagem pelo nome...">
+
+      <p id="mensagem">Carregando personagens...</p>
+
+      <!-- Caixa vazia: o JavaScript cria os cards aqui dentro -->
+      <div id="lista-cards" class="grade-cards"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Dados fornecidos pela Dragon Ball API · Projeto UniFECAF</p>
+  </footer>
+
+  <!-- Janela de detalhes (o conteúdo é preenchido pelo JS) -->
+  <div id="modal" class="modal" hidden>
+    <div class="modal-conteudo">
+      <button id="modal-fechar" class="modal-fechar" aria-label="Fechar">✕</button>
+      <div id="modal-corpo"></div>
+    </div>
+  </div>
+
+  <!-- A ORDEM importa: traducoes.js primeiro, depois script.js -->
+  <script src="js/traducoes.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
